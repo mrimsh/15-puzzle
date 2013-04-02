@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainMenu.cs">
     <Files>
-      <File FileName="Assets\ToMainMenu.cs" Line="8" Column="27" />
-      <File FileName="Assets\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/MainMenu.cs" Line="25" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

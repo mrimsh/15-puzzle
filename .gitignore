@@ -6,3 +6,6 @@
 *.csproj
 *.unityproj
 *.sln
+
+15-puzzle.userprefs
+Assembly-CSharp.pidb
