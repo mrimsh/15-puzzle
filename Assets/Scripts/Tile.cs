@@ -72,7 +72,7 @@ public class Tile : MonoBehaviour
 	/// <param name='t'>
 	/// Плитка, которую нужно поменять местами с этой.
 	/// </param>
-	private void Swap (Tile t)
+	public void Swap (Tile t)
 	{
 		// сохраняем номер и изображение плитки для замены в переменные (буферы)
 		int tempNumber = t.number;
