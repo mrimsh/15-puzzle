@@ -2,10 +2,32 @@ using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-	
+
+    public GameSkin[] skins;
+    public static int skinId = 1;
 	public Tile space;
 	int randomQuality = 1000;
-	
+
+    void OnLevelWasLoaded()
+    {
+
+        skinId = PlayerPrefs.GetInt("skinId");
+
+        for (char c = 'A'; c < 'E'; c++)
+        {
+            for (int i = 1; i <= 4; i++)
+            {
+                string name = c.ToString();
+                name += i;
+                GameObject g = GameObject.Find(name);
+                Material m = skins[skinId].GetMaterial(name);
+                g.renderer.material = m;
+            }
+        }
+        GameObject bg = GameObject.Find("_BG");
+        bg.renderer.material = skins[skinId].GetMaterial("bg");
+        
+    }
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < randomQuality; i++) {

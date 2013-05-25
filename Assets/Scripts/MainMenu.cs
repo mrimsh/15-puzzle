@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
 			Application.LoadLevel (1);
 		}
 		if (GUI.Button (rect_skinBtn, "Set Skin")) {
-			// TODO: Skin selection dialog
+            PlayerPrefs.SetInt("skinId", (PlayerPrefs.GetInt("skinId") + 1) % 2);
 		}
 		if (GUI.Button (rect_exitBtn, "Exit")) {
 			Application.Quit ();
