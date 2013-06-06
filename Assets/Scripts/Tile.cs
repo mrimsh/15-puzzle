@@ -2,7 +2,20 @@ using UnityEngine;
 using System.Collections;
 
 public class Tile : MonoBehaviour
-{
+{ // Use this for initialization
+	public void YouWinner () {
+		
+	Debug.Log("You Won The Game! CONGRATULATIONS!!! " );
+		Application.LoadLevel(0);
+		
+		
+		}
+
+	
+
+		
+	
+
 	/// <summary>
 	/// Ссылка на правую плитку. Null, если там ничего нет.
 	/// </summary>
@@ -33,9 +46,29 @@ public class Tile : MonoBehaviour
 		bool isMoved = Move ();
 		
 		// Реакция на успешное или неуспешное перемещение 
-		if (isMoved) {
+		if (isMoved){
+			if (GameObject.Find("A1").GetComponent<Tile>().number==1 && 
+				GameObject.Find("A2").GetComponent<Tile>().number==2 && 
+				GameObject.Find("A3").GetComponent<Tile>().number==3 && 
+				GameObject.Find("A4").GetComponent<Tile>().number==4 && 
+				GameObject.Find("B1").GetComponent<Tile>().number==5 && 
+				GameObject.Find("B2").GetComponent<Tile>().number==6 && 
+				GameObject.Find("B3").GetComponent<Tile>().number==7 && 
+				GameObject.Find("B4").GetComponent<Tile>().number==8 && 
+				GameObject.Find("C1").GetComponent<Tile>().number==9 && 
+				GameObject.Find("C2").GetComponent<Tile>().number==10 && 
+				GameObject.Find("C3").GetComponent<Tile>().number==11 && 
+				GameObject.Find("C4").GetComponent<Tile>().number==12 && 
+				GameObject.Find("D1").GetComponent<Tile>().number==13 && 
+				GameObject.Find("D2").GetComponent<Tile>().number==14 && 
+				GameObject.Find("D3").GetComponent<Tile>().number==15 && 
+				GameObject.Find("D4").GetComponent<Tile>().number==0 )
+					YouWinner();
+		
 			Debug.Log ("Tile " + number + " has moved.");
-		} else {
+		}
+			else 
+			{
 			Debug.Log ("Tile " + number + " can not move!");
 		}
 	}
